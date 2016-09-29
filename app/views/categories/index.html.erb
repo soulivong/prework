@@ -1,0 +1,11 @@
+<%= link_to "New Category", :action => "new" %>
+<hr />
+<ul>
+	<% @cates.each do |cate| %>
+		<li><%= cate.name %> |
+			<%= link_to "edit", edit_category_path(:id => cate.id) %> | 
+			<%= link_to "delete", @cate, :confirm => "Are you sure you want to delete this category?", :method => :delete %>
+		</li>
+	<% end %>
+</ul>
+

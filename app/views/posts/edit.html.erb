@@ -1,0 +1,18 @@
+<h2>Edit Post</h2>
+<hr />
+<%= form_for @post do |f| %>
+	<div class="form-group">
+		<%= f.label :title %><br />
+		<%= f.text_field :title, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :body %><br />
+		<%= f.text_area :body, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select one"}, class: "form-control" %>
+	</div>
+	<%= f.submit "Update Post", class: "btn btn-primary" %>	
+<% end %>
+<br /><br />
+<%= link_to "Go back", post_path %>

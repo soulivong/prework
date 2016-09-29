@@ -1,0 +1,26 @@
+<h1><%= @post.title %></h1>
+<p><%= flash[:notice] %></p>
+<small><%= @post.created_at.strftime("%b %d, %Y") %></small>
+<p><%= @markdown.render(@post.body).html_safe %></p>
+<p>Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
+<%= link_to "Edit Post", edit_post_path %> | 
+<%= link_to "Delete", @post,  data: {:confirm => 'Are you sure you want to delete this post?'}, :method => :delete %>
+
+<hr>
+<h2>Add comments</h2>
+<%= form_for @comment do |f| %>
+<%= f.hidden_field :post_id %>
+<div class="form-group">
+	<%= f.label :name %>
+	<%= f.text_field :name, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :email %>
+	<%= f.text_field :email, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :body %>
+	<%= f.text_area :name, class: "form-control" %>
+</div>
+<%= f.submit "Post Comment", class: "btn btn-primary" %>
+<% end %>

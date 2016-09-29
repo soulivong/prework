@@ -1,0 +1,28 @@
+<!-- search box -->
+<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+	<%= submit_tag "Search" %>
+<% end %>
+<% if @posts.present? %>
+  <%= render "/partials/post" %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+<br />
+<%= link_to "New Post", :action => "new" %>
+<hr />
+<!-- post  -->
+<% @posts.each do |post| %>
+	<div class="card">
+	   <div class="card-block">
+		    <h4 class="card-title"><%= link_to post.title, post %> 
+		    	<span class="label label-default"><%= post.view_count %> views</span>
+		    </h4> 	
+		    <p class="card-text"><%= @markdown.render(post.body).html_safe %></p>
+		</div>
+	</div>
+	<hr />
+<% end %>
+		
+
+

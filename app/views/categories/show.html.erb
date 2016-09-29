@@ -1,0 +1,9 @@
+<h1><%= @cate.name %></h1>
+<% if @posts.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
+	<p><%= @markdown.render(post.body).html_safe %></p>
+<% end.empty? %>
+	<p>No posts in this category</p>
+<% end %>
+<br /><br />
+<%= link_to "back to categories", categories_path %>

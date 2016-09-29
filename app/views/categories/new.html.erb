@@ -1,0 +1,15 @@
+<h1>Add New Categories</h1>
+<%= form_for @cate do |c| %>
+	<% if @cate.errors.any? %>
+		<ul>
+			<% @cate.errors.full_messages.each do |msg|  %>
+	 			<li style="color:red"><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<div class="form-group">
+		<%= c.label :category_name %>
+		<%= c.text_field :name, class: "form-control" %>
+	</div>
+	<%= c.submit "Add Category", class: "btn btn-primary" %>	
+<% end %>

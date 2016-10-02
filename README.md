@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-https://s21.postimg.org/tn0f62k5z/Soulivong_Walk_Through.gif
+![Video Walkthrough](https://s21.postimg.org/tn0f62k5z/Soulivong_Walk_Through.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

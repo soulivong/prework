@@ -28,10 +28,19 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 - [x] add and modify posts' category
+ 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+https://s21.postimg.org/tn0f62k5z/Soulivong_Walk_Through.gif
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-- image link: https://s14.postimg.org/g4txvn91t/DSC_2101.jpg
-- removal link: https://postimg.org/delete/t8zi8c13m/
+- image link(remove 's'): https://s17.postimg.org/779l6qdrj/DSC_2101.jpgsss
+- removal link: https://postimg.org/delete/3nnngxb1s/
+- removal gif: https://postimg.org/delete/6yb86i2s8/
 
 
 ## License

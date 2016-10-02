@@ -12,7 +12,7 @@
 	<div class="form-group">
 		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select one"}, class: "form-control" %>
 	</div>
-	<%= f.submit "Update Post", class: "btn btn-primary" %>	
+	<%= f.submit "Update Post", class: "btn btn-default" %>
+	<%= link_to "Cancel", post_path %>	
 <% end %>
 <br /><br />
-<%= link_to "Go back", post_path %>

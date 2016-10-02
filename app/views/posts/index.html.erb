@@ -10,16 +10,20 @@
   <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
 <% end %>
 <br />
-
 <%= link_to "New Post", :action => "new" %>
 <hr />
 <!-- post  -->
 <% @posts.each do |post| %>
 	<div class="card card-outline-danger">
-		<h3 class="card-header">
+		<h3 class="card-header" style="margin-bottom: 2px">
 			<%= link_to post.title, post %> 
 			<span class="badge"><%= post.view_count %> views</span>
 		</h3>
+		<h4 style="margin-top: 2px">
+			<span class="label label-warning" style="background-color: #3FEEDB; font-family: cursive;">
+				<%= link_to post.category.name, category_path(:id => post.category.id), style: "color: #fff" %>
+			</span>
+		</h4>
 	   	<div class="card-block">
 		    <h2 class="card-title">
 		    	<!-- no title -->

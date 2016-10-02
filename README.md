@@ -4,7 +4,7 @@ SoulivongBlog is a Ruby on Rails blog application.
 
 Submitted by: Soulivong Phimmathong
 
-Time spent: approximately 30 hours spent in total 
+Time spent: approximately 35 hours spent in total 
 
 URL: http://soulivongblog.herokuapp.com/
 
@@ -29,18 +29,9 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 - [x] add and modify posts' category
 
-## Video Walkthrough 
-
-Here's a walkthrough of implemented user stories:
-
-https://s22.postimg.org/wtds6ttyp/Soulivong_App_Walk_Through.gif
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
 ## Notes
-- image link(remove 's'): https://s14.postimg.org/g4txvn91t/DSC_2101.jpgsss
+- image link: https://s14.postimg.org/g4txvn91t/DSC_2101.jpg
 - removal link: https://postimg.org/delete/t8zi8c13m/
-- removeal gif: https://postimg.org/delete/6l2nhg9v6/
 
 
 ## License

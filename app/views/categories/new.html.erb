@@ -8,8 +8,7 @@
 		</ul>
 	<% end %>
 	<div class="form-group">
-		<%= c.label :category_name %>
-		<%= c.text_field :name, class: "form-control" %>
+		<%= c.text_field :name, class: "form-control", placeholder: "category name" %>
 	</div>
 	<%= c.submit "Add Category", class: "btn btn-primary" %>	
 <% end %>

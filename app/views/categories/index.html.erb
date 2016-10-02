@@ -2,7 +2,7 @@
 <hr />
 <ul>
 	<% @cates.each do |cate| %>
-		<li><%= cate.name %> |
+		<li><%= link_to cate.name, cate %> |
 			<%= link_to "edit", edit_category_path(:id => cate.id) %> | 
 			<%= link_to "delete", @cate, :confirm => "Are you sure you want to delete this category?", :method => :delete %>
 		</li>

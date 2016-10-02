@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all
+		@category = Category.all
 		@markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 
 		# search

@@ -4,25 +4,30 @@
 	<%= submit_tag "Search" %>
 <% end %>
 <% if @posts.present? %>
+<!-- search -->
   <%= render "/partials/post" %>
 <% else %>
   <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
 <% end %>
 <br />
+
 <%= link_to "New Post", :action => "new" %>
 <hr />
 <!-- post  -->
 <% @posts.each do |post| %>
-	<div class="card">
-	   <div class="card-block">
-		    <h4 class="card-title"><%= link_to post.title, post %> 
-		    	<span class="label label-default"><%= post.view_count %> views</span>
-		    </h4> 	
+	<div class="card card-outline-danger">
+		<h3 class="card-header">
+			<%= link_to post.title, post %> 
+			<span class="badge"><%= post.view_count %> views</span>
+		</h3>
+	   	<div class="card-block">
+		    <h2 class="card-title">
+		    	<!-- no title -->
+		    </h2> 	
 		    <p class="card-text"><%= @markdown.render(post.body).html_safe %></p>
+		    <footer><%= link_to "delete", post_path(post),  data: {:confirm => 'Are you sure you want to delete this post?'}, :method => :delete, class: 'btn btn-danger btn-sm'%></footer>
 		</div>
 	</div>
 	<hr />
 <% end %>
-		
-
 
